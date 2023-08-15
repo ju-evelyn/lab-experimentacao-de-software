@@ -3,7 +3,7 @@ from JsonToRepositoryConverter import JsonToRepositoryConvert
 
 query = '''
 {
-  repositories: search(query: "stars:>100", type: REPOSITORY, first: 10) {
+  repositories: search(query: "stars:>100", type: REPOSITORY, first: 38) {
     edges {
       node {
         ... on Repository {
@@ -20,18 +20,10 @@ query = '''
             name
           }
           updatedAt
-          issues(filterBy: {states: CLOSED}) {
+          issues {
             totalCount
           }
-        }
-      }
-    }
-  }
-  totalIssuesCount: search(query: "stars:>100", type: REPOSITORY, first: 10) {
-    edges {
-      node {
-        ... on Repository {
-          issues {
+          closed: issues(filterBy: {states: CLOSED}) {
             totalCount
           }
         }
@@ -45,7 +37,7 @@ url = 'https://api.github.com/graphql'
 
 # token de acesso
 headers = {
-    'Authorization': 'Bearer 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'
+    'Authorization': 'Bearer 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'
 }
 
 # requisição GraphQL
@@ -63,7 +55,7 @@ if response.status_code == 200:
     for repo in repositories:
         # Formatando as respostas para o txt
         repositoriosTXT = '''
-            Nome do repositório: {} | Stars #: {}
+            Nome do repositório: {}
             RQ 01 - idade do repositório: {}
             RQ 02 - pull requests aceitas: {}
             RQ 03 - total de releases: {}
@@ -71,7 +63,7 @@ if response.status_code == 200:
             RQ 05 - linguagem primária: {}
             RQ 06 - razão de issues fechadas: {}
             --------------------------------------------------------------------------
-        '''.format(repo.getNode().getName(), repo.getNode().getStarsCount(), repo.getRepositoryAge().__str__(),
+        '''.format(repo.getNode().getName(), repo.getRepositoryAge().__str__(),
                    str(repo.getNode().getMergedPRsCount().getPRsTotalCount()),
                    str(repo.getNode().getRelease().getReleaseTotalCount()),
                    str(repo.getTimeSinceLastUpdate()),

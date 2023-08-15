@@ -10,6 +10,8 @@ class RepositoryData:
         self.node = node
         self.repositoryAge = self.setRepositoryAge()
         self.timeSinceLastUpdate = self.setTimeSinceLastUpdate()
+        self.setClosedIssuesRatio(node.getClosedIssuesCount().getIssuesCount(),
+                                  node.getTotalIssuesCount().getIssuesCount())
 
     def setRepositoryAge(self):
         return datetime.datetime.today() - self.node.creationDate
@@ -17,9 +19,9 @@ class RepositoryData:
     def setTimeSinceLastUpdate(self):
         return datetime.datetime.today() - self.node.lastUpdateDate
 
-    def setClosedIssuesRatio(self, totalIssues):
+    def setClosedIssuesRatio(self, closedIssues, totalIssues):
         if totalIssues is not None and totalIssues != 0:
-            self.closedIssuesRatio = self.node.closedIssuesCount.getIssuesCount() / totalIssues
+            self.closedIssuesRatio = closedIssues / totalIssues
         else:
             self.closedIssuesRatio = 0
 
@@ -37,8 +39,8 @@ class RepositoryData:
 
 
 class Node:
-    def __init__(self, name, starsCount, creationDate, mergedPRsCount,
-                 releaseCount, primaryLanguage, lastUpdateDate, closedIssuesCount):
+    def __init__(self, name, starsCount, creationDate, mergedPRsCount, releaseCount,
+                 primaryLanguage, lastUpdateDate, totalIssuesCount, closedIssuesCount):
         self.name = name
         self.starsCount = starsCount
         self.creationDate = creationDate
@@ -46,19 +48,20 @@ class Node:
         self.releaseCount = releaseCount
         self.primaryLanguage = primaryLanguage
         self.lastUpdateDate = lastUpdateDate
+        self.totalIssuesCount = totalIssuesCount
         self.closedIssuesCount = closedIssuesCount
 
     def getName(self):
         return self.name
-
-    def getStarsCount(self):
-        return self.starsCount
 
     def getCreationDate(self):
         return self.creationDate
 
     def getMergedPRsCount(self):
         return self.mergedPRsCount
+
+    def getTotalIssuesCount(self):
+        return self.totalIssuesCount
 
     def getClosedIssuesCount(self):
         return self.closedIssuesCount

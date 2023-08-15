@@ -4,27 +4,13 @@ from datetime import datetime
 
 def JsonToRepositoryConvert(data):
     repositoriesEdges = digToRepositoriesEdges(data)
-    issuesEdges = digToIssuesEdges(data)
-
-    issuesCountList = [createTotalIssuesData(item) for item in issuesEdges]
     repositories = [createRepositoryData(item) for item in repositoriesEdges]
-
-    for i in range(len(repositories)):
-        updateIssuesRatio(repositories, issuesCountList, i)
-
     return repositories
 
 
 def digToRepositoriesEdges(data):
     dataKey = data['data']
     searchKey = dataKey['repositories']
-    edgesKey = searchKey['edges']
-    return edgesKey
-
-
-def digToIssuesEdges(data):
-    dataKey = data['data']
-    searchKey = dataKey['totalIssuesCount']
     edgesKey = searchKey['edges']
     return edgesKey
 
@@ -44,23 +30,14 @@ def createRepositoryData(edge):
     issuesDict = edge['node']['issues']
     issuesObj = Issues(issuesDict['totalCount'])
 
+    closedDict = edge['node']['closed']
+    closedObj = Issues(closedDict['totalCount'])
+
     nodeDict = edge['node']
     nodeObj = Node(nodeDict['name'], nodeDict['stargazerCount'], formateDate(nodeDict['createdAt']), pullRequestObj,
-                   releaseObj, primaryLanguageObj, formateDate(nodeDict['updatedAt']), issuesObj)
+                   releaseObj, primaryLanguageObj, formateDate(nodeDict['updatedAt']), issuesObj, closedObj)
 
     return RepositoryData(nodeObj)
-
-
-def createTotalIssuesData(edge):
-    issuesDict = edge['node']['issues']
-    issuesObj = Issues(issuesDict['totalCount'])
-
-    return issuesObj
-
-
-def updateIssuesRatio(repositories, issuesCounts, i):
-    issuesCount = issuesCounts.__getitem__(i)
-    repositories.__getitem__(i).setClosedIssuesRatio(issuesCount.getIssuesCount())
 
 
 def formateDate(stringDate):
