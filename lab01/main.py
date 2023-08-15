@@ -1,80 +1,9 @@
 import requests
+from JsonToRepositoryConverter import JsonToRepositoryConvert
 
-
-# Objetos da pesquisa
-class RepositoryData:
-    def __init__(self, node):
-        self.node = node
-
-    def __iter__(self):
-        return self
-
-    def getName(self):
-        return self.node.name
-
-
-class Node:
-    def __init__(self, name, starsCount, creationDate, mergedPRsCount, release, primaryLanguage):
-        self.name = name
-        self.starsCount = starsCount
-        self.creationDate = creationDate
-        self.mergedPRsCount = mergedPRsCount
-        self.release = release
-        self.primaryLanguage = primaryLanguage
-
-
-class PullRequests:
-    def __init__(self, totalCount):
-        self.totalCount = totalCount
-
-
-class Releases:
-    def __init__(self, totalCount):
-        self.totalCount = totalCount
-
-
-class PrimaryLanguage:
-    def __init__(self, name):
-        self.name = name
-
-
-# Funções para transformar a resposta da query em uma lista de objetos RepositoryData
-def JsonToRepositoryConvert(data):
-    edges = digToTheEdges(data)
-    repositories = [createRepositoryData(item) for item in edges]
-    return repositories
-
-
-def digToTheEdges(data):
-    dataKey = data['data']
-    searchKey = dataKey['search']
-    edgesKey = searchKey['edges']
-    return edgesKey
-
-
-def createRepositoryData(edge):
-    primaryLanguageObj = ''
-    primaryLanguageDict = edge['node']['primaryLanguage']
-    if primaryLanguageDict is not None:
-        primaryLanguageObj = PrimaryLanguage(primaryLanguageDict['name'])
-
-    releaseDict = edge['node']['releases']
-    releaseObj = Releases(releaseDict["totalCount"])
-
-    pullRequestDict = edge['node']['pullRequests']
-    pullRequestObj = PullRequests(pullRequestDict['totalCount'])
-
-    nodeDict = edge['node']
-    nodeObj = Node(nodeDict['name'], nodeDict['stargazerCount'], nodeDict['createdAt'],
-                   pullRequestObj, releaseObj, primaryLanguageObj)
-
-    return RepositoryData(nodeObj)
-
-
-# Query Graphql com as infos necessárias para as RQs
 query = '''
-query {
-  search(query: "stars:>100", type: REPOSITORY, first: 10) {
+{
+  repositories: search(query: "stars:>100", type: REPOSITORY, first: 10) {
     edges {
       node {
         ... on Repository {
@@ -90,6 +19,21 @@ query {
           primaryLanguage {
             name
           }
+          updatedAt
+          issues(filterBy: {states: CLOSED}) {
+            totalCount
+          }
+        }
+      }
+    }
+  }
+  totalIssuesCount: search(query: "stars:>100", type: REPOSITORY, first: 10) {
+    edges {
+      node {
+        ... on Repository {
+          issues {
+            totalCount
+          }
         }
       }
     }
@@ -101,16 +45,42 @@ url = 'https://api.github.com/graphql'
 
 # token de acesso
 headers = {
-    'Authorization': 'Bearer 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'
+    'Authorization': 'Bearer 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'
 }
 
 # requisição GraphQL
 response = requests.post(url, json={'query': query}, headers=headers)
 
+
 if response.status_code == 200:
     data = response.json()
     repositories = JsonToRepositoryConvert(data)
+
+    # Limpando o arquivo TXT
+    with open("repos.txt", "w") as arquivo:
+        arquivo.write(" ")
+
     for repo in repositories:
-        print(repo.getName())
+        # Formatando as respostas para o txt
+        repositoriosTXT = '''
+            Nome do repositório: {}
+            RQ 01 - idade do repositório: {}
+            RQ 02 - pull requests aceitas: {}
+            RQ 03 - total de releases: {}
+            RQ 04 - tempo até a última atualização: {}
+            RQ 05 - linguagem primária: {}
+            RQ 06 - razão de issues fechadas: {}
+            --------------------------------------------------------------------------
+        '''.format(repo.getNode().getName(), repo.getRepositoryAge().__str__(),
+                   str(repo.getNode().getMergedPRsCount().getPRsTotalCount()),
+                   str(repo.getNode().getRelease().getReleaseTotalCount()),
+                   str(repo.getTimeSinceLastUpdate()),
+                   repo.getNode().validatePrimaryLanguage(),
+                   str(repo.getClosedIssuesRatio()))
+
+        # Adicionando as informações do repositório no txt
+        with open("repos.txt", "a") as arquivo:
+            arquivo.write(repositoriosTXT)
+    print('Objetos adicionados ao arquivo')
 else:
     print('Erro na requisição: ', response.status_code)
