@@ -51,6 +51,9 @@ class Node:
     def getName(self):
         return self.name
 
+    def getStarsCount(self):
+        return self.starsCount
+
     def getCreationDate(self):
         return self.creationDate
 

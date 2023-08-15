@@ -63,7 +63,7 @@ if response.status_code == 200:
     for repo in repositories:
         # Formatando as respostas para o txt
         repositoriosTXT = '''
-            Nome do repositório: {}
+            Nome do repositório: {} | Stars #: {}
             RQ 01 - idade do repositório: {}
             RQ 02 - pull requests aceitas: {}
             RQ 03 - total de releases: {}
@@ -71,7 +71,7 @@ if response.status_code == 200:
             RQ 05 - linguagem primária: {}
             RQ 06 - razão de issues fechadas: {}
             --------------------------------------------------------------------------
-        '''.format(repo.getNode().getName(), repo.getRepositoryAge().__str__(),
+        '''.format(repo.getNode().getName(), repo.getNode().getStarsCount(), repo.getRepositoryAge().__str__(),
                    str(repo.getNode().getMergedPRsCount().getPRsTotalCount()),
                    str(repo.getNode().getRelease().getReleaseTotalCount()),
                    str(repo.getTimeSinceLastUpdate()),
