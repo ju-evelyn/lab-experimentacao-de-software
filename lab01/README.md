@@ -8,12 +8,13 @@ Alunos:
 
 ### Lab01 - Características de Repositórios Populares
 ### Como executar
-Abra a pasta lab01, onde estão localizados os arquivos a seguir, com o terminal:
+Abra a pasta lab01 com o terminal, onde estão localizados os arquivos a seguir:
 - main.py
 - JsonToRepositoryConvert
 - RepositoryData
 
 Altere o token de Acesso atual para o seu token gerado
+
 Execute o seguinte comando: python main.py
 
 ### Resultado
