@@ -1,3 +1,4 @@
+import csv
 import requests
 from JsonToRepositoryConverter import JsonToRepositoryConvert
 
@@ -8,7 +9,7 @@ def make_graphql_request(query, variables):
 
     # Token de acesso
     headers = {
-        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
+        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
     }
 
     response = requests.post(url, json={'query': query, 'variables': variables}, headers=headers)
@@ -84,30 +85,26 @@ while totalCollected < 100:
         break
 
 
-with open("repos.txt", "w") as arquivo:
-    arquivo.write(" ")
+with open("repos.csv", "w", newline='') as arquivo:
+    writer = csv.writer(arquivo)
+    writer.writerow(["Repository Name", "Stars", "Repository Age", "Accepted Pull Requests", "Total Releases", "Time since last", "Primary Language", "Closed Issues %"])
 
-i=0 # Contador para a ordem decrescente de Repos com mais stars
-for repo in all_repositories:
-    i += 1
-    # Formatando as respostas para o txt
-    repositoriosTXT = '''
-        {} - Nome do repositório: {} | Stars: {}
-        RQ 01 - idade do repositório: {}
-        RQ 02 - pull requests aceitas: {}
-        RQ 03 - total de releases: {}
-        RQ 04 - tempo até a última atualização: {}
-        RQ 05 - linguagem primária: {}
-        RQ 06 - razão de issues fechadas: {}
-        --------------------------------------------------------------------------
-    '''.format(i, repo.getNode().getName(), repo.getNode().getStarsCount(), repo.getRepositoryAge().__str__(),
-               str(repo.getNode().getMergedPRsCount().getPRsTotalCount()),
-               str(repo.getNode().getRelease().getReleaseTotalCount()),
-               str(repo.getTimeSinceLastUpdate()),
-               repo.getNode().validatePrimaryLanguage(),
-               str(repo.getClosedIssuesRatio()))
+    i=0 # Contador para a ordem decrescente de Repos com mais stars
+    for repo in all_repositories:
+        i += 1
+        # Formatando as respostas para o csv
+        repositoriosCSV = [
+            repo.getNode().getName(),
+            repo.getNode().getStarsCount(),
+            repo.getRepositoryAge().__str__(),
+            str(repo.getNode().getMergedPRsCount().getPRsTotalCount()),
+            str(repo.getNode().getRelease().getReleaseTotalCount()),
+            str(repo.getTimeSinceLastUpdate()),
+            repo.getNode().validatePrimaryLanguage(),
+            str(repo.getClosedIssuesRatio())
+        ]
 
-    # Adicionando as informações do repositório no txt
-    with open("repos.txt", "a") as arquivo:
-        arquivo.write(repositoriosTXT)
+        # Adicionando as informações do repositório no csv
+        writer.writerow(repositoriosCSV)
+
 print('Objetos adicionados ao arquivo')
