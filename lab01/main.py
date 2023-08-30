@@ -18,7 +18,7 @@ def make_graphql_request(query, variables):
 
 query_template = '''
 query GetRepositories($perPage: Int!, $cursor: String) {
-  repositories: search(query: "stars:>100", type: REPOSITORY, first: $perPage, after: $cursor) {
+  repositories: search(query: "stars:>10 sort:stars-desc", type: REPOSITORY, first: $perPage, after: $cursor) {
     edges {
       cursor
       node {
@@ -59,7 +59,7 @@ cursor = None  # Cursor para a próxima página, começa como None para a primei
 all_repositories = []
 
 totalCollected = 0
-while totalCollected < 100:
+while totalCollected < 1000:
     variables = {
         "perPage": perPage,
         "cursor": cursor
@@ -82,6 +82,7 @@ while totalCollected < 100:
         cursor = pageInfo['endCursor']
     else:
         print('Erro na requisição:', response.status_code)
+        # print(json.dumps(response))
         break
 
 
