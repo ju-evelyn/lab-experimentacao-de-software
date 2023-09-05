@@ -9,7 +9,7 @@ def make_graphql_request(query, variables):
 
     # Token de acesso
     headers = {
-        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
+        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
     }
 
     response = requests.post(url, json={'query': query, 'variables': variables}, headers=headers)
@@ -59,7 +59,7 @@ cursor = None  # Cursor para a próxima página, começa como None para a primei
 all_repositories = []
 
 totalCollected = 0
-while totalCollected < 100:
+while totalCollected < 1000:
     variables = {
         "perPage": perPage,
         "cursor": cursor

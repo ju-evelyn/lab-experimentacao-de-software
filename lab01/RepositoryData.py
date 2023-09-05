@@ -14,7 +14,8 @@ class RepositoryData:
                                   node.getTotalIssuesCount().getIssuesCount())
 
     def setRepositoryAge(self):
-        return datetime.datetime.today() - self.node.creationDate
+        stringDate = datetime.datetime.today() - self.node.creationDate
+        return stringDate.days
 
     def setTimeSinceLastUpdate(self):
         return datetime.datetime.today() - self.node.lastUpdateDate
