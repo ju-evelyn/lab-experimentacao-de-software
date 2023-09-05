@@ -1,0 +1,901 @@
+ 
+        1 - Nome do repositório: freeCodeCamp | Stars: 371061
+        RQ 01 - idade do repositório: 3156 days, 15:31:12.188425
+        RQ 02 - pull requests aceitas: 20359
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:52:16.188443
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.9892865552154462
+        --------------------------------------------------------------------------
+    
+        2 - Nome do repositório: free-programming-books | Stars: 295763
+        RQ 01 - idade do repositório: 3596 days, 2:29:54.188588
+        RQ 02 - pull requests aceitas: 5673
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:35:34.188596
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.9634273772204807
+        --------------------------------------------------------------------------
+    
+        3 - Nome do repositório: 996.ICU | Stars: 267790
+        RQ 01 - idade do repositório: 1604 days, 1:49:17.188704
+        RQ 02 - pull requests aceitas: 1063
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 23:04:25.188711
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0
+        --------------------------------------------------------------------------
+    
+        4 - Nome do repositório: awesome | Stars: 265556
+        RQ 01 - idade do repositório: 3322 days, 19:37:54.188814
+        RQ 02 - pull requests aceitas: 624
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:06:20.188820
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.9244712990936556
+        --------------------------------------------------------------------------
+    
+        5 - Nome do repositório: coding-interview-university | Stars: 263303
+        RQ 01 - idade do repositório: 2627 days, 6:46:19.188919
+        RQ 02 - pull requests aceitas: 371
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:34:45.188926
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.8905472636815921
+        --------------------------------------------------------------------------
+    
+        6 - Nome do repositório: public-apis | Stars: 252215
+        RQ 01 - idade do repositório: 2704 days, 9:30:49.189024
+        RQ 02 - pull requests aceitas: 1871
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:02:41.189031
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0.9960159362549801
+        --------------------------------------------------------------------------
+    
+        7 - Nome do repositório: developer-roadmap | Stars: 247066
+        RQ 01 - idade do repositório: 2344 days, 19:34:39.189125
+        RQ 02 - pull requests aceitas: 1599
+        RQ 03 - total de releases: 1
+        RQ 04 - tempo até a última atualização: -1 day, 21:02:41.189131
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.6508295625942685
+        --------------------------------------------------------------------------
+    
+        8 - Nome do repositório: system-design-primer | Stars: 227051
+        RQ 01 - idade do repositório: 2361 days, 17:05:03.189222
+        RQ 02 - pull requests aceitas: 196
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:11:23.189229
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0.29069767441860467
+        --------------------------------------------------------------------------
+    
+        9 - Nome do repositório: build-your-own-x | Stars: 212534
+        RQ 01 - idade do repositório: 1924 days, 21:17:13.189337
+        RQ 02 - pull requests aceitas: 121
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:01:11.189344
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.7053571428571429
+        --------------------------------------------------------------------------
+    
+        10 - Nome do repositório: react | Stars: 211810
+        RQ 01 - idade do repositório: 3735 days, 17:04:37.189437
+        RQ 02 - pull requests aceitas: 9173
+        RQ 03 - total de releases: 99
+        RQ 04 - tempo até a última atualização: -1 day, 21:26:55.189443
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.9138752118815078
+        --------------------------------------------------------------------------
+    
+        11 - Nome do repositório: vue | Stars: 204784
+        RQ 01 - idade do repositório: 3670 days, 5:55:42.126438
+        RQ 02 - pull requests aceitas: 1119
+        RQ 03 - total de releases: 245
+        RQ 04 - tempo até a última atualização: -1 day, 22:36:13.126457
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.9621470058081314
+        --------------------------------------------------------------------------
+    
+        12 - Nome do repositório: awesome-python | Stars: 176952
+        RQ 01 - idade do repositório: 3336 days, 12:20:27.126585
+        RQ 02 - pull requests aceitas: 535
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:09:51.126593
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0
+        --------------------------------------------------------------------------
+    
+        13 - Nome do repositório: tensorflow | Stars: 176949
+        RQ 01 - idade do repositório: 2839 days, 8:01:13.126699
+        RQ 02 - pull requests aceitas: 16146
+        RQ 03 - total de releases: 193
+        RQ 04 - tempo até a última atualização: -1 day, 21:29:53.126705
+        RQ 05 - linguagem primária: C++
+        RQ 06 - razão de issues fechadas: 0.9491426602708505
+        --------------------------------------------------------------------------
+    
+        14 - Nome do repositório: javascript-algorithms | Stars: 173747
+        RQ 01 - idade do repositório: 1971 days, 1:33:29.126803
+        RQ 02 - pull requests aceitas: 282
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:09:08.126810
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.6461538461538462
+        --------------------------------------------------------------------------
+    
+        15 - Nome do repositório: You-Dont-Know-JS | Stars: 170547
+        RQ 01 - idade do repositório: 3560 days, 6:43:09.126906
+        RQ 02 - pull requests aceitas: 360
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:08:57.126912
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.9123767798466593
+        --------------------------------------------------------------------------
+    
+        16 - Nome do repositório: CS-Notes | Stars: 166163
+        RQ 01 - idade do repositório: 2009 days, 18:24:09.127007
+        RQ 02 - pull requests aceitas: 375
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:40:39.127014
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.7791519434628975
+        --------------------------------------------------------------------------
+    
+        17 - Nome do repositório: bootstrap | Stars: 164937
+        RQ 01 - idade do repositório: 4400 days, 12:01:33.127105
+        RQ 02 - pull requests aceitas: 8474
+        RQ 03 - total de releases: 87
+        RQ 04 - tempo até a última atualização: -1 day, 22:36:06.127112
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.9851888758039677
+        --------------------------------------------------------------------------
+    
+        18 - Nome do repositório: Python | Stars: 164645
+        RQ 01 - idade do repositório: 2586 days, 23:36:32.127203
+        RQ 02 - pull requests aceitas: 2313
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:01:23.127210
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0.9797507788161994
+        --------------------------------------------------------------------------
+    
+        19 - Nome do repositório: ohmyzsh | Stars: 161513
+        RQ 01 - idade do repositório: 5100 days, 15:04:56.127318
+        RQ 02 - pull requests aceitas: 2917
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:33:30.127325
+        RQ 05 - linguagem primária: Shell
+        RQ 06 - razão de issues fechadas: 0.9520017695200177
+        --------------------------------------------------------------------------
+    
+        20 - Nome do repositório: linux | Stars: 155882
+        RQ 01 - idade do repositório: 4363 days, 10:32:21.127417
+        RQ 02 - pull requests aceitas: 9
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:07:02.127424
+        RQ 05 - linguagem primária: C
+        RQ 06 - razão de issues fechadas: 0
+        --------------------------------------------------------------------------
+    
+        21 - Nome do repositório: flutter | Stars: 155843
+        RQ 01 - idade do repositório: 3084 days, 10:25:37.379464
+        RQ 02 - pull requests aceitas: 32639
+        RQ 03 - total de releases: 1
+        RQ 04 - tempo até a última atualização: -1 day, 21:03:47.379482
+        RQ 05 - linguagem primária: Dart
+        RQ 06 - razão de issues fechadas: 0.8662675117524616
+        --------------------------------------------------------------------------
+    
+        22 - Nome do repositório: gitignore | Stars: 150574
+        RQ 01 - idade do repositório: 4663 days, 13:03:21.379605
+        RQ 02 - pull requests aceitas: 1523
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:05:31.379613
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0
+        --------------------------------------------------------------------------
+    
+        23 - Nome do repositório: vscode | Stars: 149384
+        RQ 01 - idade do repositório: 2903 days, 12:56:57.379713
+        RQ 02 - pull requests aceitas: 19017
+        RQ 03 - total de releases: 109
+        RQ 04 - tempo até a última atualização: -1 day, 21:13:58.379719
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.9542741446138224
+        --------------------------------------------------------------------------
+    
+        24 - Nome do repositório: computer-science | Stars: 147241
+        RQ 01 - idade do repositório: 3391 days, 9:01:56.379816
+        RQ 02 - pull requests aceitas: 240
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:09:37.379822
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.9722675367047309
+        --------------------------------------------------------------------------
+    
+        25 - Nome do repositório: Auto-GPT | Stars: 146522
+        RQ 01 - idade do repositório: 152 days, 23:59:28.379949
+        RQ 02 - pull requests aceitas: 946
+        RQ 03 - total de releases: 18
+        RQ 04 - tempo até a última atualização: -1 day, 21:02:57.379960
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0.6829268292682927
+        --------------------------------------------------------------------------
+    
+        26 - Nome do repositório: awesome-selfhosted | Stars: 143373
+        RQ 01 - idade do repositório: 2998 days, 6:47:18.380068
+        RQ 02 - pull requests aceitas: 2377
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:04:39.380075
+        RQ 05 - linguagem primária: Makefile
+        RQ 06 - razão de issues fechadas: 0.9575530586766542
+        --------------------------------------------------------------------------
+    
+        27 - Nome do repositório: the-art-of-command-line | Stars: 138703
+        RQ 01 - idade do repositório: 3009 days, 18:09:32.380166
+        RQ 02 - pull requests aceitas: 317
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 22:16:29.380172
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.5485232067510548
+        --------------------------------------------------------------------------
+    
+        28 - Nome do repositório: Python-100-Days | Stars: 138561
+        RQ 01 - idade do repositório: 1993 days, 17:14:43.380262
+        RQ 02 - pull requests aceitas: 12
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 22:51:52.380268
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0.16859504132231404
+        --------------------------------------------------------------------------
+    
+        29 - Nome do repositório: JavaGuide | Stars: 136139
+        RQ 01 - idade do repositório: 1926 days, 19:53:35.380433
+        RQ 02 - pull requests aceitas: 882
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:18:31.380446
+        RQ 05 - linguagem primária: Java
+        RQ 06 - razão de issues fechadas: 0.9362637362637363
+        --------------------------------------------------------------------------
+    
+        30 - Nome do repositório: javascript | Stars: 135925
+        RQ 01 - idade do repositório: 3939 days, 10:06:45.380561
+        RQ 02 - pull requests aceitas: 800
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:09:01.380568
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.9263074484944532
+        --------------------------------------------------------------------------
+    
+        31 - Nome do repositório: youtube-dl | Stars: 122714
+        RQ 01 - idade do repositório: 4671 days, 18:45:38.652250
+        RQ 02 - pull requests aceitas: 1608
+        RQ 03 - total de releases: 341
+        RQ 04 - tempo até a última atualização: -1 day, 21:07:43.652261
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0.8541103967740709
+        --------------------------------------------------------------------------
+    
+        32 - Nome do repositório: fucking-algorithm | Stars: 117605
+        RQ 01 - idade do repositório: 1274 days, 0:19:22.652333
+        RQ 02 - pull requests aceitas: 232
+        RQ 03 - total de releases: 1
+        RQ 04 - tempo até a última atualização: -1 day, 22:01:29.652338
+        RQ 05 - linguagem primária: Markdown
+        RQ 06 - razão de issues fechadas: 0.5749039692701664
+        --------------------------------------------------------------------------
+    
+        33 - Nome do repositório: 30-seconds-of-code | Stars: 114716
+        RQ 01 - idade do repositório: 2085 days, 15:45:42.652398
+        RQ 02 - pull requests aceitas: 776
+        RQ 03 - total de releases: 5
+        RQ 04 - tempo até a última atualização: -1 day, 21:01:09.652402
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.9929577464788732
+        --------------------------------------------------------------------------
+    
+        34 - Nome do repositório: project-based-learning | Stars: 113964
+        RQ 01 - idade do repositório: 2317 days, 4:12:59.652471
+        RQ 02 - pull requests aceitas: 182
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:14:51.652475
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.7125
+        --------------------------------------------------------------------------
+    
+        35 - Nome do repositório: go | Stars: 113637
+        RQ 01 - idade do repositório: 3284 days, 4:47:05.652528
+        RQ 02 - pull requests aceitas: 1
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:46:33.652532
+        RQ 05 - linguagem primária: Go
+        RQ 06 - razão de issues fechadas: 0.8561615248165281
+        --------------------------------------------------------------------------
+    
+        36 - Nome do repositório: react-native | Stars: 111256
+        RQ 01 - idade do repositório: 3140 days, 15:10:29.652586
+        RQ 02 - pull requests aceitas: 718
+        RQ 03 - total de releases: 273
+        RQ 04 - tempo até a última atualização: -1 day, 21:27:50.652590
+        RQ 05 - linguagem primária: Java
+        RQ 06 - razão de issues fechadas: 0.9399103501191294
+        --------------------------------------------------------------------------
+    
+        37 - Nome do repositório: next.js | Stars: 110306
+        RQ 01 - idade do repositório: 2505 days, 9:47:54.652642
+        RQ 02 - pull requests aceitas: 13583
+        RQ 03 - total de releases: 1000
+        RQ 04 - tempo até a última atualização: -1 day, 21:54:50.652646
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.88022028453419
+        --------------------------------------------------------------------------
+    
+        38 - Nome do repositório: transformers | Stars: 110250
+        RQ 01 - idade do repositório: 1751 days, 19:24:45.652697
+        RQ 02 - pull requests aceitas: 10217
+        RQ 03 - total de releases: 122
+        RQ 04 - tempo até a última atualização: -1 day, 21:17:15.652701
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0.952121260726602
+        --------------------------------------------------------------------------
+    
+        39 - Nome do repositório: electron | Stars: 108656
+        RQ 01 - idade do repositório: 3778 days, 7:33:09.652757
+        RQ 02 - pull requests aceitas: 17769
+        RQ 03 - total de releases: 1000
+        RQ 04 - tempo até a última atualização: -1 day, 21:52:51.652761
+        RQ 05 - linguagem primária: C++
+        RQ 06 - razão de issues fechadas: 0.9555924576815942
+        --------------------------------------------------------------------------
+    
+        40 - Nome do repositório: awesome-go | Stars: 106507
+        RQ 01 - idade do repositório: 3327 days, 19:38:30.652813
+        RQ 02 - pull requests aceitas: 2998
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:00:43.652816
+        RQ 05 - linguagem primária: Go
+        RQ 06 - razão de issues fechadas: 0.9982876712328768
+        --------------------------------------------------------------------------
+    
+        41 - Nome do repositório: d3 | Stars: 106048
+        RQ 01 - idade do repositório: 4705 days, 15:58:08.225467
+        RQ 02 - pull requests aceitas: 460
+        RQ 03 - total de releases: 193
+        RQ 04 - tempo até a última atualização: 1:02:25.225485
+        RQ 05 - linguagem primária: Shell
+        RQ 06 - razão de issues fechadas: 0.9976830398517146
+        --------------------------------------------------------------------------
+    
+        42 - Nome do repositório: the-book-of-secret-knowledge | Stars: 104440
+        RQ 01 - idade do repositório: 1879 days, 22:37:36.225606
+        RQ 02 - pull requests aceitas: 122
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:02:59.225613
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0
+        --------------------------------------------------------------------------
+    
+        43 - Nome do repositório: free-programming-books-zh_CN | Stars: 104349
+        RQ 01 - idade do repositório: 3572 days, 7:21:31.225713
+        RQ 02 - pull requests aceitas: 280
+        RQ 03 - total de releases: 3
+        RQ 04 - tempo até a última atualização: -1 day, 22:51:39.225720
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0
+        --------------------------------------------------------------------------
+    
+        44 - Nome do repositório: axios | Stars: 101303
+        RQ 01 - idade do repositório: 3284 days, 10:50:23.225815
+        RQ 02 - pull requests aceitas: 745
+        RQ 03 - total de releases: 60
+        RQ 04 - tempo até a última atualização: -1 day, 21:48:35.225841
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.8995776630689817
+        --------------------------------------------------------------------------
+    
+        45 - Nome do repositório: kubernetes | Stars: 100895
+        RQ 01 - idade do repositório: 3357 days, 10:24:46.225943
+        RQ 02 - pull requests aceitas: 55977
+        RQ 03 - total de releases: 618
+        RQ 04 - tempo até a última atualização: -1 day, 22:56:39.225950
+        RQ 05 - linguagem primária: Go
+        RQ 06 - razão de issues fechadas: 0.9588582947725295
+        --------------------------------------------------------------------------
+    
+        46 - Nome do repositório: create-react-app | Stars: 100553
+        RQ 01 - idade do repositório: 2585 days, 18:25:39.226044
+        RQ 02 - pull requests aceitas: 1944
+        RQ 03 - total de releases: 83
+        RQ 04 - tempo até a última atualização: -1 day, 22:03:46.226051
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.7990659948383926
+        --------------------------------------------------------------------------
+    
+        47 - Nome do repositório: stable-diffusion-webui | Stars: 97209
+        RQ 01 - idade do repositório: 358 days, 19:15:24.226141
+        RQ 02 - pull requests aceitas: 1330
+        RQ 03 - total de releases: 13
+        RQ 04 - tempo até a última atualização: -1 day, 21:16:40.226148
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0.7477552377785168
+        --------------------------------------------------------------------------
+    
+        48 - Nome do repositório: node | Stars: 97106
+        RQ 01 - idade do repositório: 3184 days, 13:23:39.226265
+        RQ 02 - pull requests aceitas: 6625
+        RQ 03 - total de releases: 352
+        RQ 04 - tempo até a última atualização: -1 day, 21:54:41.226271
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.9186649582036732
+        --------------------------------------------------------------------------
+    
+        49 - Nome do repositório: tech-interview-handbook | Stars: 93939
+        RQ 01 - idade do repositório: 2598 days, 4:20:02.226385
+        RQ 02 - pull requests aceitas: 444
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:00:45.226392
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.7733333333333333
+        --------------------------------------------------------------------------
+    
+        50 - Nome do repositório: PowerToys | Stars: 93915
+        RQ 01 - idade do repositório: 1567 days, 15:36:48.226492
+        RQ 02 - pull requests aceitas: 4103
+        RQ 03 - total de releases: 83
+        RQ 04 - tempo até a última atualização: -1 day, 21:30:14.226498
+        RQ 05 - linguagem primária: C#
+        RQ 06 - razão de issues fechadas: 0.7808706841089428
+        --------------------------------------------------------------------------
+    
+        51 - Nome do repositório: three.js | Stars: 93857
+        RQ 01 - idade do repositório: 4893 days, 14:22:52.502539
+        RQ 02 - pull requests aceitas: 11164
+        RQ 03 - total de releases: 147
+        RQ 04 - tempo até a última atualização: -1 day, 21:48:42.502559
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.9684441444481944
+        --------------------------------------------------------------------------
+    
+        52 - Nome do repositório: TypeScript | Stars: 93409
+        RQ 01 - idade do repositório: 3346 days, 17:52:14.502814
+        RQ 02 - pull requests aceitas: 13224
+        RQ 03 - total de releases: 181
+        RQ 04 - tempo até a última atualização: -1 day, 21:00:47.502823
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.8524763186363756
+        --------------------------------------------------------------------------
+    
+        53 - Nome do repositório: nodebestpractices | Stars: 92232
+        RQ 01 - idade do repositório: 2161 days, 0:47:34.502931
+        RQ 02 - pull requests aceitas: 761
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 23:08:44.502937
+        RQ 05 - linguagem primária: Dockerfile
+        RQ 06 - razão de issues fechadas: 0.9064516129032258
+        --------------------------------------------------------------------------
+    
+        54 - Nome do repositório: deno | Stars: 90411
+        RQ 01 - idade do repositório: 1919 days, 7:46:27.503055
+        RQ 02 - pull requests aceitas: 8876
+        RQ 03 - total de releases: 238
+        RQ 04 - tempo até a última atualização: -1 day, 21:18:04.503062
+        RQ 05 - linguagem primária: Rust
+        RQ 06 - razão de issues fechadas: 0.8353864734299516
+        --------------------------------------------------------------------------
+    
+        55 - Nome do repositório: terminal | Stars: 89967
+        RQ 01 - idade do repositório: 2195 days, 14:42:31.503164
+        RQ 02 - pull requests aceitas: 3320
+        RQ 03 - total de releases: 93
+        RQ 04 - tempo até a última atualização: -1 day, 23:17:18.503170
+        RQ 05 - linguagem primária: C++
+        RQ 06 - razão de issues fechadas: 0.873712455639228
+        --------------------------------------------------------------------------
+    
+        56 - Nome do repositório: angular | Stars: 89656
+        RQ 01 - idade do repositório: 3253 days, 17:08:52.503267
+        RQ 02 - pull requests aceitas: 3416
+        RQ 03 - total de releases: 299
+        RQ 04 - tempo até a última atualização: -1 day, 21:21:02.503274
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.9499863136902201
+        --------------------------------------------------------------------------
+    
+        57 - Nome do repositório: scrcpy | Stars: 89381
+        RQ 01 - idade do repositório: 2093 days, 15:20:26.503370
+        RQ 02 - pull requests aceitas: 69
+        RQ 03 - total de releases: 32
+        RQ 04 - tempo até a última atualização: -1 day, 21:05:13.503376
+        RQ 05 - linguagem primária: C
+        RQ 06 - razão de issues fechadas: 0.6221052631578947
+        --------------------------------------------------------------------------
+    
+        58 - Nome do repositório: material-ui | Stars: 88199
+        RQ 01 - idade do repositório: 3284 days, 14:08:59.503469
+        RQ 02 - pull requests aceitas: 16132
+        RQ 03 - total de releases: 420
+        RQ 04 - tempo até a última atualização: -1 day, 21:05:19.503475
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.922306046616372
+        --------------------------------------------------------------------------
+    
+        59 - Nome do repositório: ant-design | Stars: 87128
+        RQ 01 - idade do repositório: 3035 days, 17:43:29.503575
+        RQ 02 - pull requests aceitas: 11789
+        RQ 03 - total de releases: 598
+        RQ 04 - tempo até a última atualização: -1 day, 22:29:09.503582
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.9669121688468726
+        --------------------------------------------------------------------------
+    
+        60 - Nome do repositório: awesome-chatgpt-prompts | Stars: 86274
+        RQ 01 - idade do repositório: 253 days, 19:26:40.503681
+        RQ 02 - pull requests aceitas: 105
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:07:56.503687
+        RQ 05 - linguagem primária: HTML
+        RQ 06 - razão de issues fechadas: 0
+        --------------------------------------------------------------------------
+    
+        61 - Nome do repositório: clean-code-javascript | Stars: 84558
+        RQ 01 - idade do repositório: 2454 days, 10:55:17.110817
+        RQ 02 - pull requests aceitas: 149
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:54:18.110836
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.5510204081632653
+        --------------------------------------------------------------------------
+    
+        62 - Nome do repositório: rust | Stars: 84362
+        RQ 01 - idade do repositório: 4808 days, 12:41:55.110959
+        RQ 02 - pull requests aceitas: 49309
+        RQ 03 - total de releases: 114
+        RQ 04 - tempo até a última atualização: -1 day, 21:28:18.110966
+        RQ 05 - linguagem primária: Rust
+        RQ 06 - razão de issues fechadas: 0.8186542116543329
+        --------------------------------------------------------------------------
+    
+        63 - Nome do repositório: puppeteer | Stars: 84260
+        RQ 01 - idade do repositório: 2289 days, 11:04:45.111068
+        RQ 02 - pull requests aceitas: 3526
+        RQ 03 - total de releases: 283
+        RQ 04 - tempo até a última atualização: -1 day, 21:41:12.111075
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.9530516431924883
+        --------------------------------------------------------------------------
+    
+        64 - Nome do repositório: vue-element-admin | Stars: 83619
+        RQ 01 - idade do repositório: 2312 days, 5:45:09.111173
+        RQ 02 - pull requests aceitas: 313
+        RQ 03 - total de releases: 49
+        RQ 04 - tempo até a última atualização: -1 day, 22:32:20.111198
+        RQ 05 - linguagem primária: Vue
+        RQ 06 - razão de issues fechadas: 0.6613039796782387
+        --------------------------------------------------------------------------
+    
+        65 - Nome do repositório: java-design-patterns | Stars: 83248
+        RQ 01 - idade do repositório: 3293 days, 16:35:40.111300
+        RQ 02 - pull requests aceitas: 1101
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:12:47.111306
+        RQ 05 - linguagem primária: Java
+        RQ 06 - razão de issues fechadas: 0.7801169590643274
+        --------------------------------------------------------------------------
+    
+        66 - Nome do repositório: storybook | Stars: 79792
+        RQ 01 - idade do repositório: 2707 days, 4:57:14.111404
+        RQ 02 - pull requests aceitas: 8699
+        RQ 03 - total de releases: 1000
+        RQ 04 - tempo até a última atualização: -1 day, 22:41:32.111411
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.8549162807267545
+        --------------------------------------------------------------------------
+    
+        67 - Nome do repositório: thefuck | Stars: 78970
+        RQ 01 - idade do repositório: 3051 days, 18:12:54.111507
+        RQ 02 - pull requests aceitas: 481
+        RQ 03 - total de releases: 17
+        RQ 04 - tempo até a última atualização: -1 day, 23:34:13.111514
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0.6735294117647059
+        --------------------------------------------------------------------------
+    
+        68 - Nome do repositório: animate.css | Stars: 78396
+        RQ 01 - idade do repositório: 4325 days, 23:13:20.111611
+        RQ 02 - pull requests aceitas: 313
+        RQ 03 - total de releases: 22
+        RQ 04 - tempo até a última atualização: -1 day, 22:56:16.111617
+        RQ 05 - linguagem primária: CSS
+        RQ 06 - razão de issues fechadas: 0.9706227967097533
+        --------------------------------------------------------------------------
+    
+        69 - Nome do repositório: models | Stars: 76048
+        RQ 01 - idade do repositório: 2749 days, 8:05:38.111723
+        RQ 02 - pull requests aceitas: 2303
+        RQ 03 - total de releases: 36
+        RQ 04 - tempo até a última atualização: 0:54:23.111731
+        RQ 05 - linguagem primária: Jupyter Notebook
+        RQ 06 - razão de issues fechadas: 0.8543323566345752
+        --------------------------------------------------------------------------
+    
+        70 - Nome do repositório: realworld | Stars: 76008
+        RQ 01 - idade do repositório: 2727 days, 12:31:05.111832
+        RQ 02 - pull requests aceitas: 410
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 22:21:53.111839
+        RQ 05 - linguagem primária: TypeScript
+        RQ 06 - razão de issues fechadas: 0.8980769230769231
+        --------------------------------------------------------------------------
+    
+        71 - Nome do repositório: papers-we-love | Stars: 75697
+        RQ 01 - idade do repositório: 3530 days, 18:49:20.387725
+        RQ 02 - pull requests aceitas: 424
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 23:03:21.387743
+        RQ 05 - linguagem primária: Shell
+        RQ 06 - razão de issues fechadas: 0.9506726457399103
+        --------------------------------------------------------------------------
+    
+        72 - Nome do repositório: Web-Dev-For-Beginners | Stars: 74778
+        RQ 01 - idade do repositório: 1009 days, 6:37:01.387936
+        RQ 02 - pull requests aceitas: 473
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:07:57.387951
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.9133858267716536
+        --------------------------------------------------------------------------
+    
+        73 - Nome do repositório: laravel | Stars: 74362
+        RQ 01 - idade do repositório: 4452 days, 6:14:53.388189
+        RQ 02 - pull requests aceitas: 1507
+        RQ 03 - total de releases: 147
+        RQ 04 - tempo até a última atualização: -1 day, 21:43:19.388198
+        RQ 05 - linguagem primária: PHP
+        RQ 06 - razão de issues fechadas: 0
+        --------------------------------------------------------------------------
+    
+        74 - Nome do repositório: LeetCodeAnimation | Stars: 73546
+        RQ 01 - idade do repositório: 1714 days, 1:19:39.388322
+        RQ 02 - pull requests aceitas: 63
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: 0:49:54.388331
+        RQ 05 - linguagem primária: Java
+        RQ 06 - razão de issues fechadas: 0.711864406779661
+        --------------------------------------------------------------------------
+    
+        75 - Nome do repositório: HelloGitHub | Stars: 72922
+        RQ 01 - idade do repositório: 2660 days, 2:56:50.388436
+        RQ 02 - pull requests aceitas: 16
+        RQ 03 - total de releases: 33
+        RQ 04 - tempo até a última atualização: -1 day, 21:42:31.388442
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0.9563476171405687
+        --------------------------------------------------------------------------
+    
+        76 - Nome do repositório: django | Stars: 72515
+        RQ 01 - idade do repositório: 4127 days, 6:33:43.388538
+        RQ 02 - pull requests aceitas: 8328
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:28:57.388545
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0
+        --------------------------------------------------------------------------
+    
+        77 - Nome do repositório: every-programmer-should-know | Stars: 72163
+        RQ 01 - idade do repositório: 2182 days, 20:02:35.388637
+        RQ 02 - pull requests aceitas: 98
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 23:19:07.388643
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.42857142857142855
+        --------------------------------------------------------------------------
+    
+        78 - Nome do repositório: free-for-dev | Stars: 72145
+        RQ 01 - idade do repositório: 3072 days, 12:14:35.388736
+        RQ 02 - pull requests aceitas: 2252
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 22:11:43.388743
+        RQ 05 - linguagem primária: HTML
+        RQ 06 - razão de issues fechadas: 0
+        --------------------------------------------------------------------------
+    
+        79 - Nome do repositório: Font-Awesome | Stars: 72094
+        RQ 01 - idade do repositório: 4197 days, 19:01:18.388838
+        RQ 02 - pull requests aceitas: 198
+        RQ 03 - total de releases: 52
+        RQ 04 - tempo até a última atualização: -1 day, 21:17:05.388853
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.7166245525373763
+        --------------------------------------------------------------------------
+    
+        80 - Nome do repositório: FiraCode | Stars: 71980
+        RQ 01 - idade do repositório: 3199 days, 13:48:23.388952
+        RQ 02 - pull requests aceitas: 131
+        RQ 03 - total de releases: 29
+        RQ 04 - tempo até a última atualização: -1 day, 21:31:28.388958
+        RQ 05 - linguagem primária: Clojure
+        RQ 06 - razão de issues fechadas: 0.718408736349454
+        --------------------------------------------------------------------------
+    
+        81 - Nome do repositório: svelte | Stars: 71861
+        RQ 01 - idade do repositório: 2459 days, 15:07:58.772172
+        RQ 02 - pull requests aceitas: 2881
+        RQ 03 - total de releases: 13
+        RQ 04 - tempo até a última atualização: -1 day, 22:16:24.772191
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.8461243284727552
+        --------------------------------------------------------------------------
+    
+        82 - Nome do repositório: advanced-java | Stars: 71225
+        RQ 01 - idade do repositório: 1774 days, 21:42:33.772318
+        RQ 02 - pull requests aceitas: 75
+        RQ 03 - total de releases: 1
+        RQ 04 - tempo até a última atualização: -1 day, 23:03:53.772326
+        RQ 05 - linguagem primária: Java
+        RQ 06 - razão de issues fechadas: 0.9787234042553191
+        --------------------------------------------------------------------------
+    
+        83 - Nome do repositório: tailwindcss | Stars: 71189
+        RQ 01 - idade do repositório: 2139 days, 18:21:49.772430
+        RQ 02 - pull requests aceitas: 1824
+        RQ 03 - total de releases: 213
+        RQ 04 - tempo até a última atualização: -1 day, 21:06:24.772437
+        RQ 05 - linguagem primária: HTML
+        RQ 06 - razão de issues fechadas: 0.9979681679647816
+        --------------------------------------------------------------------------
+    
+        84 - Nome do repositório: bitcoin | Stars: 70931
+        RQ 01 - idade do repositório: 4622 days, 18:04:20.772535
+        RQ 02 - pull requests aceitas: 13176
+        RQ 03 - total de releases: 43
+        RQ 04 - tempo até a última atualização: -1 day, 21:27:25.772542
+        RQ 05 - linguagem primária: C++
+        RQ 06 - razão de issues fechadas: 0.9530939446137539
+        --------------------------------------------------------------------------
+    
+        85 - Nome do repositório: gin | Stars: 70816
+        RQ 01 - idade do repositório: 3347 days, 9:23:38.772668
+        RQ 02 - pull requests aceitas: 939
+        RQ 03 - total de releases: 25
+        RQ 04 - tempo até a última atualização: -1 day, 21:56:28.772675
+        RQ 05 - linguagem primária: Go
+        RQ 06 - razão de issues fechadas: 0.7409376510391493
+        --------------------------------------------------------------------------
+    
+        86 - Nome do repositório: frp | Stars: 70784
+        RQ 01 - idade do repositório: 2794 days, 17:56:04.772770
+        RQ 02 - pull requests aceitas: 481
+        RQ 03 - total de releases: 84
+        RQ 04 - tempo até a última atualização: -1 day, 21:00:41.772777
+        RQ 05 - linguagem primária: Go
+        RQ 06 - razão de issues fechadas: 0.9733893557422969
+        --------------------------------------------------------------------------
+    
+        87 - Nome do repositório: opencv | Stars: 70643
+        RQ 01 - idade do repositório: 4044 days, 23:40:46.772871
+        RQ 02 - pull requests aceitas: 11373
+        RQ 03 - total de releases: 60
+        RQ 04 - tempo até a última atualização: -1 day, 21:52:28.772877
+        RQ 05 - linguagem primária: C++
+        RQ 06 - razão de issues fechadas: 0.7589609343536046
+        --------------------------------------------------------------------------
+    
+        88 - Nome do repositório: pytorch | Stars: 69785
+        RQ 01 - idade do repositório: 2559 days, 3:54:22.772970
+        RQ 02 - pull requests aceitas: 5424
+        RQ 03 - total de releases: 45
+        RQ 04 - tempo até a última atualização: -1 day, 21:10:18.772976
+        RQ 05 - linguagem primária: Python
+        RQ 06 - razão de issues fechadas: 0.6755628990702364
+        --------------------------------------------------------------------------
+    
+        89 - Nome do repositório: nvm | Stars: 69312
+        RQ 01 - idade do repositório: 4870 days, 15:33:16.773067
+        RQ 02 - pull requests aceitas: 688
+        RQ 03 - total de releases: 63
+        RQ 04 - tempo até a última atualização: -1 day, 21:06:46.773087
+        RQ 05 - linguagem primária: Shell
+        RQ 06 - razão de issues fechadas: 0.8341683366733467
+        --------------------------------------------------------------------------
+    
+        90 - Nome do repositório: awesome-vue | Stars: 69270
+        RQ 01 - idade do repositório: 2857 days, 9:04:49.773184
+        RQ 02 - pull requests aceitas: 3434
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:29:39.773190
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.8617511520737328
+        --------------------------------------------------------------------------
+    
+        91 - Nome do repositório: mall | Stars: 69076
+        RQ 01 - idade do repositório: 1960 days, 8:09:24.070988
+        RQ 02 - pull requests aceitas: 1
+        RQ 03 - total de releases: 2
+        RQ 04 - tempo até a última atualização: -1 day, 21:25:36.070994
+        RQ 05 - linguagem primária: Java
+        RQ 06 - razão de issues fechadas: 0.9466950959488273
+        --------------------------------------------------------------------------
+    
+        92 - Nome do repositório: spring-boot | Stars: 68918
+        RQ 01 - idade do repositório: 3952 days, 18:18:11.071024
+        RQ 02 - pull requests aceitas: 42
+        RQ 03 - total de releases: 182
+        RQ 04 - tempo até a última atualização: -1 day, 22:10:40.071025
+        RQ 05 - linguagem primária: Java
+        RQ 06 - razão de issues fechadas: 0.9797363122686238
+        --------------------------------------------------------------------------
+    
+        93 - Nome do repositório: hugo | Stars: 68588
+        RQ 01 - idade do repositório: 3694 days, 17:54:42.071049
+        RQ 02 - pull requests aceitas: 2114
+        RQ 03 - total de releases: 237
+        RQ 04 - tempo até a última atualização: -1 day, 21:06:16.071050
+        RQ 05 - linguagem primária: Go
+        RQ 06 - razão de issues fechadas: 0.9138604930847866
+        --------------------------------------------------------------------------
+    
+        94 - Nome do repositório: neovim | Stars: 68505
+        RQ 01 - idade do repositório: 3483 days, 19:41:46.071073
+        RQ 02 - pull requests aceitas: 10473
+        RQ 03 - total de releases: 33
+        RQ 04 - tempo até a última atualização: -1 day, 21:22:28.071074
+        RQ 05 - linguagem primária: Vim Script
+        RQ 06 - razão de issues fechadas: 0.8626575369653666
+        --------------------------------------------------------------------------
+    
+        95 - Nome do repositório: Awesome-Hacking | Stars: 68038
+        RQ 01 - idade do repositório: 2694 days, 17:33:58.071102
+        RQ 02 - pull requests aceitas: 27
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 23:52:40.071104
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0
+        --------------------------------------------------------------------------
+    
+        96 - Nome do repositório: json-server | Stars: 68032
+        RQ 01 - idade do repositório: 3548 days, 19:59:55.071126
+        RQ 02 - pull requests aceitas: 110
+        RQ 03 - total de releases: 13
+        RQ 04 - tempo até a última atualização: -1 day, 22:42:52.071127
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.4556603773584906
+        --------------------------------------------------------------------------
+    
+        97 - Nome do repositório: tauri | Stars: 67656
+        RQ 01 - idade do repositório: 1495 days, 0:11:31.071153
+        RQ 02 - pull requests aceitas: 3293
+        RQ 03 - total de releases: 607
+        RQ 04 - tempo até a última atualização: -1 day, 21:19:13.071156
+        RQ 05 - linguagem primária: Rust
+        RQ 06 - razão de issues fechadas: 0.8313793103448276
+        --------------------------------------------------------------------------
+    
+        98 - Nome do repositório: iptv | Stars: 67506
+        RQ 01 - idade do repositório: 1735 days, 11:20:11.071184
+        RQ 02 - pull requests aceitas: 5717
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 22:09:05.071185
+        RQ 05 - linguagem primária: JavaScript
+        RQ 06 - razão de issues fechadas: 0.9300947867298578
+        --------------------------------------------------------------------------
+    
+        99 - Nome do repositório: moby | Stars: 66475
+        RQ 01 - idade do repositório: 3861 days, 15:10:11.071207
+        RQ 02 - pull requests aceitas: 18747
+        RQ 03 - total de releases: 139
+        RQ 04 - tempo até a última atualização: -1 day, 23:28:42.071208
+        RQ 05 - linguagem primária: Go
+        RQ 06 - razão de issues fechadas: 0.833197463768116
+        --------------------------------------------------------------------------
+    
+        100 - Nome do repositório: app-ideas | Stars: 66452
+        RQ 01 - idade do repositório: 1632 days, 14:44:12.071233
+        RQ 02 - pull requests aceitas: 149
+        RQ 03 - total de releases: 0
+        RQ 04 - tempo até a última atualização: -1 day, 21:32:00.071234
+        RQ 05 - linguagem primária: none
+        RQ 06 - razão de issues fechadas: 0.33043478260869563
+        --------------------------------------------------------------------------
+    
