@@ -9,6 +9,9 @@ mediana_tempo_atualizacao = csv["Time since last update"].median()
 # mediana_linguagem_primaria = csv["Primary Language"].median()
 mediana_razao_issues = csv["Closed Issues %"].median()
 
+linguagem_primaria = csv["Primary Language"]
+linguagem_primaria_ordenada =
+
 print("Mediana da Idade dos Repositórios:", mediana_idade_repositorios)
 print("Mediana das prs aceitas:", mediana_prs_aceitas)
 print(mediana_total_releases)
