@@ -1,4 +1,6 @@
 import csv
+from datetime import time
+
 import requests
 from JsonToRepositoryConverter import JsonToRepositoryConvert
 
@@ -9,7 +11,7 @@ def make_graphql_request(query, variables):
 
     # Token de acesso
     headers = {
-        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
+        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
     }
 
     response = requests.post(url, json={'query': query, 'variables': variables}, headers=headers)
@@ -59,7 +61,8 @@ cursor = None  # Cursor para a próxima página, começa como None para a primei
 all_repositories = []
 
 totalCollected = 0
-while totalCollected < 10:
+while totalCollected < 1000:
+    inicio = time.time()
     variables = {
         "perPage": perPage,
         "cursor": cursor
@@ -82,7 +85,6 @@ while totalCollected < 10:
         cursor = pageInfo['endCursor']
     else:
         print('Erro na requisição:', response.status_code)
-        # print(json.dumps(response))
         break
 
 
@@ -108,4 +110,6 @@ with open("repos.csv", "w", newline='') as arquivo:
         # Adicionando as informações do repositório no csv
         writer.writerow(repositoriosCSV)
 
+tempo_execucao = time.time() - inicio
 print('Objetos adicionados ao arquivo')
+print(f"Tempo de execução: {tempo_execucao} segundos")
