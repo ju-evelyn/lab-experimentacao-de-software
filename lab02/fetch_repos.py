@@ -80,6 +80,12 @@ def dict_to_csv(data):
     df.to_csv('repos.csv', index=False)
     return df
 
+def get_repos():
+    if os.path.exists('repos.csv'):
+        return pd.read_csv('repos.csv')
+    else:
+        return dict_to_csv(fetch_1000_repos())
+
 
 def main():
     response = fetch_1000_repos()
