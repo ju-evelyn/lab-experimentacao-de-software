@@ -83,7 +83,7 @@ def dict_to_csv(data):
 
 def main():
     response = fetch_1000_repos()
-    dict_to_csv(response)
+    return dict_to_csv(response)
 
 if __name__ == '__main__':
     main()
