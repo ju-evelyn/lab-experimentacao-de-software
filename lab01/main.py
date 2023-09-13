@@ -1,7 +1,10 @@
 import csv
-import requests
-from JsonToRepositoryConverter import JsonToRepositoryConvert
+import time
 
+import requests
+from JsonToRepositoryConverter import JsonToRepositoryConvert, numberLanguage
+
+inicio = time.time()
 
 # Função para fazer a requisição GraphQL
 def make_graphql_request(query, variables):
@@ -9,7 +12,7 @@ def make_graphql_request(query, variables):
 
     # Token de acesso
     headers = {
-        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
+        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
     }
 
     response = requests.post(url, json={'query': query, 'variables': variables}, headers=headers)
@@ -82,17 +85,20 @@ while totalCollected < 1000:
         cursor = pageInfo['endCursor']
     else:
         print('Erro na requisição:', response.status_code)
-        # print(json.dumps(response))
         break
-
 
 with open("repos.csv", "w", newline='') as arquivo:
     writer = csv.writer(arquivo)
-    writer.writerow(["Repository Name", "Stars", "Repository Age", "Accepted Pull Requests", "Total Releases", "Time since last", "Primary Language", "Closed Issues %"])
+    writer.writerow(["Repository Name", "Stars", "Repository Age", "Accepted Pull Requests", "Total Releases",
+                     "Time since last update", "Primary Language", "Primary Language Number", "Closed Issues %"])
 
-    i=0 # Contador para a ordem decrescente de Repos com mais stars
+    i = 0  # Contador para a ordem decrescente de Repos com mais stars
+    languageNumberList = []  # Numerando as linguagens para cálculo posterior
+
     for repo in all_repositories:
         i += 1
+        primaryLanguage = repo.getNode().validatePrimaryLanguage()
+
         # Formatando as respostas para o csv
         repositoriosCSV = [
             repo.getNode().getName(),
@@ -101,11 +107,14 @@ with open("repos.csv", "w", newline='') as arquivo:
             str(repo.getNode().getMergedPRsCount().getPRsTotalCount()),
             str(repo.getNode().getRelease().getReleaseTotalCount()),
             str(repo.getTimeSinceLastUpdate()),
-            repo.getNode().validatePrimaryLanguage(),
+            primaryLanguage,
+            numberLanguage(primaryLanguage, languageNumberList),
             str(repo.getClosedIssuesRatio())
         ]
 
         # Adicionando as informações do repositório no csv
         writer.writerow(repositoriosCSV)
 
+tempo_execucao = time.time() - inicio
 print('Objetos adicionados ao arquivo')
+print(f"Tempo de execução: {tempo_execucao} segundos")

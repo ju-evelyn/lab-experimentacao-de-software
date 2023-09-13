@@ -14,10 +14,12 @@ class RepositoryData:
                                   node.getTotalIssuesCount().getIssuesCount())
 
     def setRepositoryAge(self):
-        return datetime.datetime.today() - self.node.creationDate
+        stringDate = datetime.datetime.today() - self.node.creationDate
+        return stringDate.days
 
     def setTimeSinceLastUpdate(self):
-        return datetime.datetime.today() - self.node.lastUpdateDate
+        updateDate = datetime.datetime.today() - self.node.lastUpdateDate
+        return updateDate.seconds
 
     def setClosedIssuesRatio(self, closedIssues, totalIssues):
         if totalIssues is not None and totalIssues != 0:

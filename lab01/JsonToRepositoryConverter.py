@@ -43,3 +43,11 @@ def createRepositoryData(edge):
 def formateDate(stringDate):
     datePattern = "%Y-%m-%dT%H:%M:%SZ"
     return datetime.strptime(stringDate, datePattern)
+
+
+def numberLanguage(language, languageNumberList):
+    if language in languageNumberList:
+        return languageNumberList.index(language)
+    else:
+        languageNumberList.append(language)
+        return languageNumberList.index(language)
