@@ -28,12 +28,11 @@ def read_csv():
 
 def run_ck(repo_name):
     # os.system('mkdir ck_results')
-    # os.system(f'java -jar ck.jar {repo_name} > {repo_name}.csv')
     os.system(f'java -jar ck.jar cloned_repos/{repo_name} false 0 False ck_results/{repo_name}')
 
 def collect_metrics():
     df = read_csv()
-    for repo in df.itertuples():
+    for repo in df[:1].itertuples():
         print(repo.name)
         run_ck(repo.name)
 
