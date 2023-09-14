@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 from fetch_repos import main as fetch_repos, get_repos
 from clone_repos import main as clone_all_repos, clone_repo, delete_cloned_repo
@@ -8,7 +9,12 @@ from collect_repo_metrics import main as collect_metrics, setup_ck, run_ck, get_
 github_df = get_repos()
 
 setup_ck()
-metrics_df = pd.DataFrame()
+
+if os.path.exists('metrics.csv'):
+    metrics_df = pd.read_csv('metrics.csv')
+else:
+    metrics_df = pd.DataFrame()
+
 for repo in github_df.itertuples():
     clone_repo(repo)
 
