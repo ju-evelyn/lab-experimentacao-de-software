@@ -1,4 +1,5 @@
 import os
+from subprocess import STDOUT, check_output
 import pandas as pd
 
 def download_tool_ck():
@@ -29,7 +30,10 @@ def read_csv():
 def run_ck(repo):
     print(repo.name)
     os.system(f'mkdir -p ck_results/{repo.name}')
-    os.system(f'java -jar ck.jar cloned_repos/{repo.name} false 0 False ck_results/{repo.name}/')
+
+    timeout_seconds = 60
+    cmd = f'java -jar ck.jar cloned_repos/{repo.name} false 0 False ck_results/{repo.name}/'
+    check_output(cmd, stderr=STDOUT, shell=True, timeout=timeout_seconds)
 
 def generate_all_metrics():
     df = read_csv()
