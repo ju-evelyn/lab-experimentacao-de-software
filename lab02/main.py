@@ -7,7 +7,6 @@ from collect_repo_metrics import main as collect_metrics, setup_ck, run_ck, get_
 
 
 github_df = get_repos()
-
 setup_ck()
 
 if os.path.exists('metrics.csv'):
@@ -15,7 +14,10 @@ if os.path.exists('metrics.csv'):
 else:
     metrics_df = pd.DataFrame()
 
+
+skip_repos = []
 remaining_repos = github_df[~github_df['name'].isin(metrics_df['name'])]
+remaining_repos = remaining_repos[~remaining_repos['name'].isin(skip_repos)]
 
 for repo in remaining_repos.itertuples():
     try:
