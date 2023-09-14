@@ -26,6 +26,9 @@ query GetRepositories($perPage: Int!, $cursor: String) {
                 ... on Repository {
                     name
                     stargazerCount
+                    releases {
+                        totalCount
+                    }
                     url
                     createdAt
                 }
@@ -73,6 +76,13 @@ def fetch_1000_repos():
             break
 
     all_repositories_nodes = [repo['node'] for repo in all_repositories]
+    for repo in all_repositories_nodes:
+        repo['releases'] = repo['releases']['totalCount']
+        time_created = pd.Timestamp(repo['createdAt'])
+        time_since_release = pd.Timestamp.now() - time_created.replace(tzinfo=None)
+        time_since_release_in_years = time_since_release.days / 365
+        repo['age'] = time_since_release_in_years
+
     return all_repositories_nodes
 
 def dict_to_csv(data):

@@ -31,15 +31,54 @@ def run_ck(repo):
     os.system(f'mkdir -p ck_results/{repo.name}')
     os.system(f'java -jar ck.jar cloned_repos/{repo.name} false 0 False ck_results/{repo.name}/')
 
-def collect_all_metrics():
+def generate_all_metrics():
     df = read_csv()
     for repo in df.itertuples():
         run_ck(repo)
 
 
+def get_metrics_ck_from_repo(repo):
+    print(repo.name)
+    df_class = pd.read_csv(f'ck_results/{repo.name}/class.csv')
+    df_method = pd.read_csv(f'ck_results/{repo.name}/method.csv')
+
+    return {
+        'name': repo.name,
+        'CBO_median': df_class['cbo'].median(),
+        'DIT_median': df_class['dit'].median(),
+        'LCOM_median': df_class['lcom'].median(),
+        'LOC_sum': df_method['loc'].sum(),
+        'stars': repo.stargazerCount,
+        'age': repo.age,
+        'releases': repo.releases
+    }
+
+def get_and_append_metrics_to_df(old_df, repo):
+    metrics = get_metrics_ck_from_repo(repo)
+    metrics_df = pd.DataFrame([metrics])
+    new_df = pd.concat([old_df, metrics_df])
+    return new_df
+
+def save_df_to_csv(df):
+    df.to_csv('metrics.csv', index=False)
+
+def df_to_csv(df):
+    df.to_csv('metrics.csv', index=False)
+
+
+def get_all_metrics():
+    github_df = read_csv()
+    metrics_df = pd.DataFrame()
+
+    for repo in github_df.itertuples():
+        metrics_df = get_and_append_metrics_to_df(metrics_df, repo)
+        save_df_to_csv(metrics_df)
+
+
 def main():
     setup_ck()
-    collect_all_metrics()
+    generate_all_metrics()
+    get_all_metrics()
 
 if __name__ == '__main__':
     main()
