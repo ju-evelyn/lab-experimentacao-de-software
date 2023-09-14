@@ -31,7 +31,7 @@ def run_ck(repo):
     print(repo.name)
     os.system(f'mkdir -p ck_results/{repo.name}')
 
-    timeout_seconds = 60
+    timeout_seconds = 60 * 5
     cmd = f'java -jar ck.jar cloned_repos/{repo.name} false 0 False ck_results/{repo.name}/'
     check_output(cmd, stderr=STDOUT, shell=True, timeout=timeout_seconds)
 
