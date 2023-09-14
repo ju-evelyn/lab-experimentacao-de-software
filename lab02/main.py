@@ -15,11 +15,16 @@ if os.path.exists('metrics.csv'):
 else:
     metrics_df = pd.DataFrame()
 
-for repo in github_df.itertuples():
-    clone_repo(repo)
+remaining_repos = github_df[~github_df['name'].isin(metrics_df['name'])]
 
-    run_ck(repo)
-    metrics_df = get_and_append_metrics_to_df(metrics_df, repo)
-    save_df_to_csv(metrics_df)
+for repo in remaining_repos.itertuples():
+    try:
+        clone_repo(repo)
 
-    delete_cloned_repo(repo)
+        run_ck(repo)
+        metrics_df = get_and_append_metrics_to_df(metrics_df, repo)
+        save_df_to_csv(metrics_df)
+    except Exception as e:
+        print(e)
+    finally:
+        delete_cloned_repo(repo)
