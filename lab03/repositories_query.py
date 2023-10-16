@@ -84,8 +84,7 @@ def fetch_300_repos():
     return all_repositories_nodes
 
 
-def filter_repos_csv():
-    repos = get_repos()
+def filter_repos_csv(repos):
     repos = repos[repos['pullRequests'] >= 100]
     repos.to_csv('repos.csv', index=False)
     print("Repositórios com menos de 100 prs removidos")
@@ -105,7 +104,8 @@ def get_repos():
 
 
 def main():
-    return filter_repos_csv()
+    repositories = get_repos()
+    return filter_repos_csv(repositories)
 
 
 if __name__ == '__main__':

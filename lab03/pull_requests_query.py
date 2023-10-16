@@ -2,6 +2,7 @@ import os
 
 import requests
 import pandas as pd
+from repositories_query import main as get_repos
 
 
 def make_graphql_request(query, variables):
@@ -48,16 +49,16 @@ query GetPullRequests($owner: String!, $repoName: String!, $perPage: Int!, $curs
 '''
 
 
-def fetch_prs():
+def fetch_prs(repo_owner, repo_name, repo_prs_total_count):
     perPage = 10  # Número de resultados por página
     cursor = None  # Cursor para a próxima página, começa como None para a primeira página
-    owner = 'EbookFoundation'
-    repoName = 'free-programming-books'
+    owner = repo_owner
+    repoName = repo_name
 
     all_pull_requests = []
 
     totalCollected = 0
-    while totalCollected < 100:
+    while totalCollected < repo_prs_total_count:
         variables = {
             "owner": owner,
             "repoName": repoName,
@@ -83,7 +84,10 @@ def fetch_prs():
         else:
             print('Erro na requisição:', response.status_code)
             break
+    return all_pull_requests
 
+
+def format_all_pull_requests(all_pull_requests):
     for repo in all_pull_requests:
         repo['comments'] = repo['comments']['totalCount']
         repo['participants'] = repo['participants']['totalCount']
@@ -95,11 +99,11 @@ def fetch_prs():
         else:
             closed_at = pd.Timestamp(repo['closedAt'])
             repo['analysisTime'] = closed_at - created_at
-    return all_pull_requests
 
 
 def filter_prs_csv():
     prs = get_prs()
+    format_all_pull_requests(prs)
     prs = prs[pd.to_timedelta(prs['analysisTime']) >= pd.Timedelta(hours=1)]
     prs.to_csv('prs.csv', index=False)
     print("Linhas de prs com menos de uma hora de análise removidas")
@@ -111,6 +115,7 @@ def dict_to_csv(data):
     return df
 
 
+# TODO: corrigir o método get_prs
 def get_prs():
     if os.path.exists('prs.csv'):
         return pd.read_csv('prs.csv')
@@ -119,6 +124,15 @@ def get_prs():
 
 
 def main():
+    repos = get_repos()
+    all_pull_requests = []
+    for repo in repos:
+        repo_owner = repo['owner']
+        repo_name = repo['name']
+        repo_prs_total_count = repo['pull_requests']
+        repo_prs_list = fetch_prs(repo_owner, repo_name, repo_prs_total_count)
+        all_pull_requests.append(filter_prs_csv())
+
     return filter_prs_csv()
 
 
