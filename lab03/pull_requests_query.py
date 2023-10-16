@@ -8,7 +8,6 @@ from repositories_query import main as get_repos
 def make_graphql_request(query, variables):
     url = 'https://api.github.com/graphql'
 
-    # Token de acesso
     headers = {
         'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
     }
@@ -49,41 +48,45 @@ query GetPullRequests($owner: String!, $repoName: String!, $perPage: Int!, $curs
 '''
 
 
-def fetch_prs(repo_owner, repo_name, repo_prs_total_count):
+def fetch_prs(repos):
     perPage = 10  # Número de resultados por página
     cursor = None  # Cursor para a próxima página, começa como None para a primeira página
-    owner = repo_owner
-    repoName = repo_name
 
     all_pull_requests = []
 
-    totalCollected = 0
-    while totalCollected < repo_prs_total_count:
-        variables = {
-            "owner": owner,
-            "repoName": repoName,
-            "perPage": perPage,
-            "cursor": cursor
-        }
+    for repo in repos:
+        repo_owner = repo['owner']
+        repo_name = repo['name']
+        repo_prs_total_count = int(repo['pull_requests'])
+        totalCollected = 0
 
-        response = make_graphql_request(query_template, variables)
+        while totalCollected < repo_prs_total_count:
 
-        if response.status_code == 200:
-            data = response.json()['data']['repository']['pullRequests']
-            pull_requests = data['nodes']
-            pageInfo = data['pageInfo']
+            variables = {
+                "owner": repo_owner,
+                "repoName": repo_name,
+                "perPage": perPage,
+                "cursor": cursor
+            }
 
-            all_pull_requests.extend(pull_requests)
+            response = make_graphql_request(query_template, variables)
 
-            totalCollected += len(pull_requests)
-            print('Total collected: {}'.format(totalCollected))
+            if response.status_code == 200:
+                data = response.json()['data']['repository']['pullRequests']
+                pull_requests = data['nodes']
+                pageInfo = data['pageInfo']
 
-            if not pageInfo['hasNextPage']:
+                all_pull_requests.extend(pull_requests)
+
+                totalCollected += len(pull_requests)
+                print('Repo: {} Total collected: {}'.format(repo_name, totalCollected))
+
+                if not pageInfo['hasNextPage']:
+                    break
+                cursor = pageInfo['endCursor']
+            else:
+                print('Erro na requisição:', response.status_code)
                 break
-            cursor = pageInfo['endCursor']
-        else:
-            print('Erro na requisição:', response.status_code)
-            break
     return all_pull_requests
 
 
@@ -99,14 +102,14 @@ def format_all_pull_requests(all_pull_requests):
         else:
             closed_at = pd.Timestamp(repo['closedAt'])
             repo['analysisTime'] = closed_at - created_at
+    return all_pull_requests
 
 
-def filter_prs_csv():
-    prs = get_prs()
-    format_all_pull_requests(prs)
-    prs = prs[pd.to_timedelta(prs['analysisTime']) >= pd.Timedelta(hours=1)]
-    prs.to_csv('prs.csv', index=False)
+def filter_prs_csv(prs_csv):
+    filtered_prs = prs_csv[pd.to_timedelta(prs_csv['analysisTime']) >= pd.Timedelta(hours=1)]
+    filtered_prs.to_csv('prs.csv', index=False)
     print("Linhas de prs com menos de uma hora de análise removidas")
+    return filtered_prs
 
 
 def dict_to_csv(data):
@@ -115,25 +118,20 @@ def dict_to_csv(data):
     return df
 
 
-# TODO: corrigir o método get_prs
-def get_prs():
+def get_prs(repos):
     if os.path.exists('prs.csv'):
         return pd.read_csv('prs.csv')
     else:
-        return dict_to_csv(fetch_prs())
+        all_prs_dict = fetch_prs(repos)
+        formatted_prs = format_all_pull_requests(all_prs_dict)
+        all_prs_csv = dict_to_csv(formatted_prs)
+        return filter_prs_csv(all_prs_csv)
 
 
 def main():
     repos = get_repos()
-    all_pull_requests = []
-    for repo in repos:
-        repo_owner = repo['owner']
-        repo_name = repo['name']
-        repo_prs_total_count = repo['pull_requests']
-        repo_prs_list = fetch_prs(repo_owner, repo_name, repo_prs_total_count)
-        all_pull_requests.append(filter_prs_csv())
-
-    return filter_prs_csv()
+    prs = get_prs(repos)
+    return prs
 
 
 if __name__ == '__main__':

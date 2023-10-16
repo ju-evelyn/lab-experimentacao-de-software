@@ -7,7 +7,6 @@ import requests
 def make_graphql_request(query, variables):
     url = 'https://api.github.com/graphql'
 
-    # Token de acesso
     headers = {
         'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
     }
@@ -52,7 +51,7 @@ def fetch_300_repos():
     all_repositories = []
 
     totalCollected = 0
-    while totalCollected < 100:
+    while totalCollected < 10:
         variables = {
             "perPage": perPage,
             "cursor": cursor
