@@ -1,15 +1,16 @@
+import csv
 import os
 
 import requests
 import pandas as pd
+from repositories_query import main as get_repos
 
 
 def make_graphql_request(query, variables):
     url = 'https://api.github.com/graphql'
 
-    # Token de acesso
     headers = {
-        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
+        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
     }
 
     response = requests.post(url, json={'query': query, 'variables': variables}, headers=headers)
@@ -51,39 +52,50 @@ query GetPullRequests($owner: String!, $repoName: String!, $perPage: Int!, $curs
 def fetch_prs():
     perPage = 10  # Número de resultados por página
     cursor = None  # Cursor para a próxima página, começa como None para a primeira página
-    owner = 'EbookFoundation'
-    repoName = 'free-programming-books'
 
     all_pull_requests = []
 
-    totalCollected = 0
-    while totalCollected < 100:
-        variables = {
-            "owner": owner,
-            "repoName": repoName,
-            "perPage": perPage,
-            "cursor": cursor
-        }
+    with open('repos.csv', newline='') as csvfile:
+        repos = csv.DictReader(csvfile)
 
-        response = make_graphql_request(query_template, variables)
+        for repo in repos:
+            repo_owner = repo['owner']
+            repo_name = repo['name']
+            repo_prs_total_count = int(repo['pullRequests'])
+            totalCollected = 0
 
-        if response.status_code == 200:
-            data = response.json()['data']['repository']['pullRequests']
-            pull_requests = data['nodes']
-            pageInfo = data['pageInfo']
+            while totalCollected < repo_prs_total_count:
 
-            all_pull_requests.extend(pull_requests)
+                variables = {
+                    "owner": repo_owner,
+                    "repoName": repo_name,
+                    "perPage": perPage,
+                    "cursor": cursor
+                }
 
-            totalCollected += len(pull_requests)
-            print('Total collected: {}'.format(totalCollected))
+                response = make_graphql_request(query_template, variables)
 
-            if not pageInfo['hasNextPage']:
-                break
-            cursor = pageInfo['endCursor']
-        else:
-            print('Erro na requisição:', response.status_code)
-            break
+                if response.status_code == 200:
+                    data = response.json()['data']['repository']['pullRequests']
+                    pull_requests = data['nodes']
+                    pageInfo = data['pageInfo']
 
+                    all_pull_requests.extend(pull_requests)
+
+                    totalCollected += len(pull_requests)
+                    print('Repo: {} Total collected: {}'.format(repo_name, totalCollected))
+
+                    if not pageInfo['hasNextPage']:
+                        break
+                    cursor = pageInfo['endCursor']
+                else:
+                    print('Erro na requisição:', response.status_code)
+                    break
+    print('Número de prs: ', all_pull_requests.__len__())
+    return all_pull_requests
+
+
+def format_all_pull_requests(all_pull_requests):
     for repo in all_pull_requests:
         repo['comments'] = repo['comments']['totalCount']
         repo['participants'] = repo['participants']['totalCount']
@@ -98,11 +110,11 @@ def fetch_prs():
     return all_pull_requests
 
 
-def filter_prs_csv():
-    prs = get_prs()
-    prs = prs[pd.to_timedelta(prs['analysisTime']) >= pd.Timedelta(hours=1)]
-    prs.to_csv('prs.csv', index=False)
+def filter_prs_csv(prs_csv):
+    filtered_prs = prs_csv[pd.to_timedelta(prs_csv['analysisTime']) >= pd.Timedelta(hours=1)]
+    filtered_prs.to_csv('prs.csv', index=False)
     print("Linhas de prs com menos de uma hora de análise removidas")
+    return filtered_prs
 
 
 def dict_to_csv(data):
@@ -115,11 +127,15 @@ def get_prs():
     if os.path.exists('prs.csv'):
         return pd.read_csv('prs.csv')
     else:
-        return dict_to_csv(fetch_prs())
+        all_prs_dict = fetch_prs()
+        formatted_prs = format_all_pull_requests(all_prs_dict)
+        all_prs_csv = dict_to_csv(formatted_prs)
+        return filter_prs_csv(all_prs_csv)
 
 
 def main():
-    return filter_prs_csv()
+    prs = get_prs()
+    return prs
 
 
 if __name__ == '__main__':
