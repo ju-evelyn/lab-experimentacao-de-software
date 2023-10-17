@@ -1,3 +1,4 @@
+import csv
 import os
 
 import requests
@@ -9,7 +10,7 @@ def make_graphql_request(query, variables):
     url = 'https://api.github.com/graphql'
 
     headers = {
-        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
+        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
     }
 
     response = requests.post(url, json={'query': query, 'variables': variables}, headers=headers)
@@ -48,45 +49,49 @@ query GetPullRequests($owner: String!, $repoName: String!, $perPage: Int!, $curs
 '''
 
 
-def fetch_prs(repos):
+def fetch_prs():
     perPage = 10  # Número de resultados por página
     cursor = None  # Cursor para a próxima página, começa como None para a primeira página
 
     all_pull_requests = []
 
-    for repo in repos:
-        repo_owner = repo['owner']
-        repo_name = repo['name']
-        repo_prs_total_count = int(repo['pull_requests'])
-        totalCollected = 0
+    with open('repos.csv', newline='') as csvfile:
+        repos = csv.DictReader(csvfile)
 
-        while totalCollected < repo_prs_total_count:
+        for repo in repos:
+            repo_owner = repo['owner']
+            repo_name = repo['name']
+            repo_prs_total_count = int(repo['pullRequests'])
+            totalCollected = 0
 
-            variables = {
-                "owner": repo_owner,
-                "repoName": repo_name,
-                "perPage": perPage,
-                "cursor": cursor
-            }
+            while totalCollected < repo_prs_total_count:
 
-            response = make_graphql_request(query_template, variables)
+                variables = {
+                    "owner": repo_owner,
+                    "repoName": repo_name,
+                    "perPage": perPage,
+                    "cursor": cursor
+                }
 
-            if response.status_code == 200:
-                data = response.json()['data']['repository']['pullRequests']
-                pull_requests = data['nodes']
-                pageInfo = data['pageInfo']
+                response = make_graphql_request(query_template, variables)
 
-                all_pull_requests.extend(pull_requests)
+                if response.status_code == 200:
+                    data = response.json()['data']['repository']['pullRequests']
+                    pull_requests = data['nodes']
+                    pageInfo = data['pageInfo']
 
-                totalCollected += len(pull_requests)
-                print('Repo: {} Total collected: {}'.format(repo_name, totalCollected))
+                    all_pull_requests.extend(pull_requests)
 
-                if not pageInfo['hasNextPage']:
+                    totalCollected += len(pull_requests)
+                    print('Repo: {} Total collected: {}'.format(repo_name, totalCollected))
+
+                    if not pageInfo['hasNextPage']:
+                        break
+                    cursor = pageInfo['endCursor']
+                else:
+                    print('Erro na requisição:', response.status_code)
                     break
-                cursor = pageInfo['endCursor']
-            else:
-                print('Erro na requisição:', response.status_code)
-                break
+    print('Número de prs: ', all_pull_requests.__len__())
     return all_pull_requests
 
 
@@ -118,19 +123,18 @@ def dict_to_csv(data):
     return df
 
 
-def get_prs(repos):
+def get_prs():
     if os.path.exists('prs.csv'):
         return pd.read_csv('prs.csv')
     else:
-        all_prs_dict = fetch_prs(repos)
+        all_prs_dict = fetch_prs()
         formatted_prs = format_all_pull_requests(all_prs_dict)
         all_prs_csv = dict_to_csv(formatted_prs)
         return filter_prs_csv(all_prs_csv)
 
 
 def main():
-    repos = get_repos()
-    prs = get_prs(repos)
+    prs = get_prs()
     return prs
 
 

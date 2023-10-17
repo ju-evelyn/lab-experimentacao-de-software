@@ -8,7 +8,7 @@ def make_graphql_request(query, variables):
     url = 'https://api.github.com/graphql'
 
     headers = {
-        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
+        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
     }
 
     response = requests.post(url, json={'query': query, 'variables': variables}, headers=headers)
@@ -28,7 +28,7 @@ query GetRepositories($perPage: Int!, $cursor: String) {
               owner{
                 login
               }
-              pullRequests(first: 10, states: MERGED) {
+              pullRequests(states: [MERGED, CLOSED]) {
               totalCount
               }
             }
@@ -51,7 +51,7 @@ def fetch_300_repos():
     all_repositories = []
 
     totalCollected = 0
-    while totalCollected < 10:
+    while totalCollected < 300:
         variables = {
             "perPage": perPage,
             "cursor": cursor
