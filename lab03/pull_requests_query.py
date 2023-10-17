@@ -1,16 +1,18 @@
 import csv
 import os
-
 import requests
 import pandas as pd
-from repositories_query import main as get_repos
+from itertools import cycle
 
 
-def make_graphql_request(query, variables):
+tokens = ['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', 'token2', 'token3']
+
+
+def make_graphql_request(query, variables, token):
     url = 'https://api.github.com/graphql'
 
     headers = {
-        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
+        'Authorization': f'Bearer {token}'
     }
 
     response = requests.post(url, json={'query': query, 'variables': variables}, headers=headers)
@@ -54,6 +56,7 @@ def fetch_prs():
     cursor = None  # Cursor para a próxima página, começa como None para a primeira página
 
     all_pull_requests = []
+    token_iterator = cycle(tokens)
 
     with open('repos.csv', newline='') as csvfile:
         repos = csv.DictReader(csvfile)
@@ -64,7 +67,8 @@ def fetch_prs():
             repo_prs_total_count = int(repo['pullRequests'])
             totalCollected = 0
 
-            while totalCollected < repo_prs_total_count:
+            for _ in range(0, repo_prs_total_count, 1000):
+                current_token = next(token_iterator)
 
                 variables = {
                     "owner": repo_owner,
@@ -73,7 +77,7 @@ def fetch_prs():
                     "cursor": cursor
                 }
 
-                response = make_graphql_request(query_template, variables)
+                response = make_graphql_request(query_template, variables, current_token)
 
                 if response.status_code == 200:
                     data = response.json()['data']['repository']['pullRequests']

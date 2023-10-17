@@ -1,14 +1,17 @@
 import os
-
+from itertools import cycle
 import pandas as pd
 import requests
 
 
-def make_graphql_request(query, variables):
+tokens = ['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', 'token2', 'token3']
+
+
+def make_graphql_request(query, variables, token):
     url = 'https://api.github.com/graphql'
 
     headers = {
-        'Authorization': 'Bearer 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'  # Substitua pelo seu token de acesso
+        'Authorization': f'Bearer {token}'
     }
 
     response = requests.post(url, json={'query': query, 'variables': variables}, headers=headers)
@@ -49,15 +52,19 @@ def fetch_300_repos():
     cursor = None  # Cursor para a próxima página, começa como None para a primeira página
 
     all_repositories = []
+    token_iterator = cycle(tokens)
 
     totalCollected = 0
-    while totalCollected < 300:
+    for _ in range(0, 300, 20):
+
+        current_token = next(token_iterator)
+
         variables = {
             "perPage": perPage,
             "cursor": cursor
         }
 
-        response = make_graphql_request(query_template, variables)
+        response = make_graphql_request(query_template, variables, current_token)
 
         if response.status_code == 200:
             data = response.json()['data']['repositories']
@@ -109,4 +116,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
